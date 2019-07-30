@@ -102,7 +102,7 @@ public class Web {
             OutputStream os = t.getResponseBody();
             os.write(response.getBytes());
             os.close();
-            out.println("Respponse: "+response);
+            out.println("Response: "+response);
         }
     }
     

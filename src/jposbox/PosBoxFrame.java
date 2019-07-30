@@ -68,13 +68,40 @@ public class PosBoxFrame extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        ComboPrinter3 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        PortPrinter3 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        ComboPrinter4 = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        PortPrinter4 = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        ComboPrinter5 = new javax.swing.JComboBox<>();
+        jLabel11 = new javax.swing.JLabel();
+        PortPrinter5 = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jPosBox");
 
         jLabel1.setText("PosBoxes:");
 
-        PosBoxesComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2" }));
+        PosBoxesComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5" }));
 
         jCheckBox1.setText("Run jPosBox on system startup");
         jCheckBox1.setEnabled(false);
@@ -103,20 +130,20 @@ public class PosBoxFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(startminimized))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
                             .addComponent(jCheckBox2)
                             .addComponent(jCheckBoxStart)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(PosBoxesComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jCheckBox1))
-                        .addGap(0, 105, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(startminimized)))
+                            .addComponent(jCheckBox1)
+                            .addComponent(jCheckBox3))
+                        .addGap(0, 202, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -132,9 +159,9 @@ public class PosBoxFrame extends javax.swing.JFrame {
                 .addComponent(jCheckBoxStart)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(startminimized))
@@ -147,7 +174,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Port:");
 
-        PortPrinter1.setText("8069");
+        PortPrinter1.setText("8090");
 
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -156,7 +183,12 @@ public class PosBoxFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Stop");
+        jButton2.setText("Test");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         SaveButton1.setText("Save");
         SaveButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +215,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(SaveButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2)))
@@ -200,7 +232,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(PortPrinter1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -214,7 +246,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Port:");
 
-        PortPrinter2.setText("8070");
+        PortPrinter2.setText("8091");
 
         jButton3.setText("Save");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +255,12 @@ public class PosBoxFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Stop");
+        jButton4.setText("Test");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Start");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +287,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
                         .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4)))
@@ -267,7 +304,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(PortPrinter2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
@@ -276,6 +313,266 @@ public class PosBoxFrame extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("PosBox 2", jPanel3);
+
+        jLabel6.setText("Printer:");
+
+        jLabel7.setText("Port:");
+
+        PortPrinter3.setText("8092");
+
+        jButton7.setText("Save");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("Test");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Start");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ComboPrinter3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PortPrinter3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
+                        .addComponent(jButton9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton8)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(ComboPrinter3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(PortPrinter3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8)
+                    .addComponent(jButton9))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("PosBox 3", jPanel4);
+
+        jLabel8.setText("Printer:");
+
+        jLabel9.setText("Port:");
+
+        PortPrinter4.setText("8093");
+
+        jButton10.setText("Save");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Test");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Start");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ComboPrinter4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PortPrinter4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
+                        .addComponent(jButton12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton11)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(ComboPrinter4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(PortPrinter4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton10)
+                    .addComponent(jButton11)
+                    .addComponent(jButton12))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("PosBox 4", jPanel5);
+
+        jLabel10.setText("Printer:");
+
+        jLabel11.setText("Port:");
+
+        PortPrinter5.setText("8094");
+
+        jButton13.setText("Save");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Test");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Start");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ComboPrinter5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PortPrinter5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jButton13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
+                        .addComponent(jButton15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton14)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(ComboPrinter5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(PortPrinter5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13)
+                    .addComponent(jButton14)
+                    .addComponent(jButton15))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("PosBox 5", jPanel6);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Printer", "Port", "State", "Button"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.setColumnSelectionAllowed(true);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab7", jPanel7);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -288,10 +585,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         getAccessibleContext().setAccessibleDescription("jPosBox");
@@ -300,7 +594,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        StartPosBox1();
+        StartPosBox(1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void SaveButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButton1ActionPerformed
@@ -312,12 +606,114 @@ public class PosBoxFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        StartPosBox2();
+        StartPosBox(2);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         SaveAll();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        SaveAll();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        StartPosBox(3);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        SaveAll();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        StartPosBox(4);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        SaveAll();
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+       StartPosBox(5);
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        PosPrinter P = new PosPrinter();
+        P.add("Printer : "+PosBoxFrame.ComboPrinter1.getSelectedItem().toString());
+        P.salto();
+        P.add("Port : "   +PortPrinter1.getText() );
+        P.salto();
+        P.add("BRAVO  Bien configuré ! ");
+        
+        
+        P.print(PosBoxFrame.ComboPrinter1.getSelectedItem().toString(),1,"7");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        PosPrinter P = new PosPrinter();
+        P.add("Printer : "+PosBoxFrame.ComboPrinter2.getSelectedItem().toString());
+        P.salto();
+        P.add("Port : "   +PortPrinter2.getText() );
+        P.salto();
+        P.add("BRAVO  Bien configuré ! ");
+        
+        
+        P.print(PosBoxFrame.ComboPrinter2.getSelectedItem().toString(),1,"7");
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        PosPrinter P = new PosPrinter();
+        P.add("Printer : "+PosBoxFrame.ComboPrinter3.getSelectedItem().toString());
+        P.salto();
+        P.add("Port : "   +PortPrinter3.getText() );
+        P.salto();
+        P.add("BRAVO  Bien configuré ! ");
+        
+        
+        P.print(PosBoxFrame.ComboPrinter3.getSelectedItem().toString(),1,"7");
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        PosPrinter P = new PosPrinter();
+        P.add("Printer : "+PosBoxFrame.ComboPrinter4.getSelectedItem().toString());
+        P.salto();
+        P.add("Port : "   +PortPrinter4.getText() );
+        P.salto();
+        P.add("BRAVO  Bien configuré ! ");
+        
+        
+        P.print(PosBoxFrame.ComboPrinter4.getSelectedItem().toString(),1,"7");
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        PosPrinter P = new PosPrinter();
+        P.add("Printer : "+PosBoxFrame.ComboPrinter5.getSelectedItem().toString());
+        P.salto();
+        P.add("Port : "   +PortPrinter5.getText() );
+        P.salto();
+        P.add("BRAVO  Bien configuré ! ");
+        
+        
+        P.print(PosBoxFrame.ComboPrinter5.getSelectedItem().toString(),1,"7");
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        String[] columnNames = {"First Name", "Last Name", ""};
+        Object[][] data =
+        {
+            {"Homer", "Simpson", "delete Homer"},
+            {"Madge", "Simpson", "delete Madge"},
+            {"Bart",  "Simpson", "delete Bart"},
+            {"Lisa",  "Simpson", "delete Lisa"},
+        }; 
+
+        javax.swing.table.DefaultTableModel model = new javax.swing.table.DefaultTableModel(data, columnNames);
+        javax.swing.JTable Jtable1 =  new javax.swing.JTable( model );
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -354,13 +750,17 @@ public class PosBoxFrame extends javax.swing.JFrame {
             "\"name\" VARCHAR(80),     \n" +
             "\"value\" VARCHAR(300)     \n" +
             ")");
-            } catch (Exception e) { /*If is created do nothing*/}
+            } catch (Exception e) { /*If is created do nothing*/};
         //PosBoxes
         PosBoxesComboBox.setSelectedIndex(Integer.parseInt(getconf("PosBoxes")));
-        if (getconf("PosBoxes").toString().equals("0")){
-            jTabbedPane1.setEnabledAt(1, false);
-            jTabbedPane1.setEnabledAt(2, false);
+        for (int i=1;i<=5;i++ ){
+            jTabbedPane1.setEnabledAt(i, false);
+            if (getconf("PosBoxes").toString().compareTo(String.valueOf(i))>=0){
+                //jTabbedPane1.setEnabledAt(1, false);
+                jTabbedPane1.setEnabledAt(i, true);
+            }
         }
+        /*
         else if (getconf("PosBoxes").toString().equals("1")){
             jTabbedPane1.setEnabledAt(1, true);
             jTabbedPane1.setEnabledAt(2, false);
@@ -369,27 +769,43 @@ public class PosBoxFrame extends javax.swing.JFrame {
             jTabbedPane1.setEnabledAt(1, true);
             jTabbedPane1.setEnabledAt(2, true);
         }
+        */
         //Printers
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
             for (PrintService printer : printServices){
             ComboPrinter1.addItem(printer.getName());
             ComboPrinter2.addItem(printer.getName());
+            ComboPrinter3.addItem(printer.getName());
+            ComboPrinter4.addItem(printer.getName());
+            ComboPrinter5.addItem(printer.getName());
+            
         }
         ComboPrinter1.setSelectedItem(getconf("Printer1"));
         ComboPrinter2.setSelectedItem(getconf("Printer2"));
+        ComboPrinter3.setSelectedItem(getconf("Printer3"));
+        ComboPrinter4.setSelectedItem(getconf("Printer4"));
+        ComboPrinter5.setSelectedItem(getconf("Printer5"));
         
         //Ports
         PortPrinter1.setText(getconf("PortPrinter1"));
         PortPrinter2.setText(getconf("PortPrinter2"));
+        PortPrinter3.setText(getconf("PortPrinter3"));
+        PortPrinter4.setText(getconf("PortPrinter4"));
+        PortPrinter5.setText(getconf("PortPrinter5"));
         
         //Run PosBoxes automatically
         if (getconf("auto").equals("on")){
             jCheckBoxStart.setSelected(true);
-            if (getconf("PosBoxes").toString().equals("1") || getconf("PosBoxes").toString().equals("2")){
+            /*if (getconf("PosBoxes").toString().equals("1") || getconf("PosBoxes").toString().equals("2")){
                 StartPosBox1();
             }
             if (getconf("PosBoxes").toString().equals("2")){
                 StartPosBox2();
+            }*/
+            for (int i=1; i<=5; i++){  
+                if (getconf("PosBoxes").toString().equals(i)){
+                    StartPosBox(i);
+                }
             }
         }
         
@@ -406,7 +822,7 @@ public class PosBoxFrame extends javax.swing.JFrame {
         boolean istray=tray.tray();
         if (istray) setVisible(false);
     }
-    
+    /*
     public void StartPosBox1(){
         Web web=new Web();
         int error=web.StartServer(Integer.parseInt(getconf("PortPrinter1")), getconf("Printer1"));
@@ -425,6 +841,16 @@ public class PosBoxFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Port "+error+" is in use");
         }
     }
+*/
+    public void StartPosBox(int n){
+        Web web=new Web();
+        int error=web.StartServer(Integer.parseInt(getconf("PortPrinter"+n)), getconf("Printer"+n));
+        if (error>0){
+            int dialogButton = JOptionPane.YES_OPTION;
+            JOptionPane.showMessageDialog(this, "Port "+error+" is in use");
+        }
+    }
+    
     
     
     public void StartPosBoxDolibarr(){
@@ -468,9 +894,14 @@ public class PosBoxFrame extends javax.swing.JFrame {
         }
         // VALORES POR DEFECTO
         if (result.equals("nothing")) {
+            //return "0";
             if (name=="PosBoxes") return "0";
-            else if (name=="PortPrinter1") return "8069";
-            else if (name=="PortPrinter2") return "8070";
+            else if (name=="PortPrinter1") return "8090";
+            else if (name=="PortPrinter2") return "8091";
+            else if (name=="PortPrinter3") return "8092";
+            else if (name=="PortPrinter4") return "8093";
+            else if (name=="PortPrinter5") return "8094";
+            
         }
         // FIN VALORES POR DEFECTO
         return result;
@@ -481,14 +912,44 @@ public class PosBoxFrame extends javax.swing.JFrame {
         if (getconf("PosBoxes").toString().equals("0")){
             jTabbedPane1.setEnabledAt(1, false);
             jTabbedPane1.setEnabledAt(2, false);
+            jTabbedPane1.setEnabledAt(3, false);
+            jTabbedPane1.setEnabledAt(4, false);
+            jTabbedPane1.setEnabledAt(5, false);
         }
         else if (getconf("PosBoxes").toString().equals("1")){
             jTabbedPane1.setEnabledAt(1, true);
             jTabbedPane1.setEnabledAt(2, false);
+            jTabbedPane1.setEnabledAt(3, false);
+            jTabbedPane1.setEnabledAt(4, false);
+            jTabbedPane1.setEnabledAt(5, false);
         }
         else if (getconf("PosBoxes").toString().equals("2")){
             jTabbedPane1.setEnabledAt(1, true);
             jTabbedPane1.setEnabledAt(2, true);
+            jTabbedPane1.setEnabledAt(3, false);
+            jTabbedPane1.setEnabledAt(4, false);
+            jTabbedPane1.setEnabledAt(5, false);
+        }
+        else if (getconf("PosBoxes").toString().equals("3")){
+            jTabbedPane1.setEnabledAt(1, true);
+            jTabbedPane1.setEnabledAt(2, true);
+            jTabbedPane1.setEnabledAt(3, true);
+            jTabbedPane1.setEnabledAt(4, false);
+            jTabbedPane1.setEnabledAt(5, false);
+        }
+        else if (getconf("PosBoxes").toString().equals("4")){
+            jTabbedPane1.setEnabledAt(1, true);
+            jTabbedPane1.setEnabledAt(2, true);
+            jTabbedPane1.setEnabledAt(3, true);
+            jTabbedPane1.setEnabledAt(4, true);
+            jTabbedPane1.setEnabledAt(5, false);
+        }
+        else if (getconf("PosBoxes").toString().equals("5")){
+            jTabbedPane1.setEnabledAt(1, true);
+            jTabbedPane1.setEnabledAt(2, true);
+            jTabbedPane1.setEnabledAt(3, true);
+            jTabbedPane1.setEnabledAt(4, true);
+            jTabbedPane1.setEnabledAt(5, true);
         }
         if (jCheckBoxStart.isSelected()) saveconf("auto", "on"); else saveconf("auto", "off");
         if (startminimized.isSelected()) saveconf("startminimized", "yes");
@@ -497,6 +958,12 @@ public class PosBoxFrame extends javax.swing.JFrame {
         saveconf("PortPrinter1", PortPrinter1.getText());
         saveconf("Printer2", ComboPrinter2.getSelectedItem().toString());
         saveconf("PortPrinter2", PortPrinter2.getText());
+        saveconf("Printer3", ComboPrinter3.getSelectedItem().toString());
+        saveconf("PortPrinter3", PortPrinter3.getText());
+        saveconf("Printer4", ComboPrinter4.getSelectedItem().toString());
+        saveconf("PortPrinter4", PortPrinter4.getText());
+        saveconf("Printer5", ComboPrinter5.getSelectedItem().toString());
+        saveconf("PortPrinter5", PortPrinter5.getText());
     }
     
     
@@ -505,29 +972,56 @@ public class PosBoxFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JComboBox<String> ComboPrinter1;
     public static javax.swing.JComboBox<String> ComboPrinter2;
+    public static javax.swing.JComboBox<String> ComboPrinter3;
+    public static javax.swing.JComboBox<String> ComboPrinter4;
+    public static javax.swing.JComboBox<String> ComboPrinter5;
     public static javax.swing.JTextField PortPrinter1;
     private javax.swing.JTextField PortPrinter2;
+    private javax.swing.JTextField PortPrinter3;
+    private javax.swing.JTextField PortPrinter4;
+    private javax.swing.JTextField PortPrinter5;
     private javax.swing.JComboBox<String> PosBoxesComboBox;
     private javax.swing.JButton SaveButton1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBoxStart;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JCheckBox startminimized;
     // End of variables declaration//GEN-END:variables
 }
